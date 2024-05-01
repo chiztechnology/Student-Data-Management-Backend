@@ -71,6 +71,7 @@ const getSingleRecord = (tableName)=>{
 
 const updateRecord = (tableName)=>{
     return (req, res)=>{
+        const body = req.body
         updateData(`${tableName}`, body, (error, results) => {
             if (error) {
                 console.log(error);
@@ -99,8 +100,8 @@ const deleteRecord = (tableName)=>{
     return (req, res)=>{
         const id = req.body.id
         deleteData(`${tableName}`, id, (error, results) => {
-            if (err) {
-                console.log(err);
+            if (error) {
+                console.log(error);
                 return res.status(500).json({
                     success: 0,
                     message: 'An error has occured while deleting the item'
