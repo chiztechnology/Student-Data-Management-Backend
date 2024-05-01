@@ -45,7 +45,7 @@ const getRecord = (tableName)=>{
 
 const getSingleRecord = (tableName)=>{
     return (req, res)=>{
-        const id = req.body.id
+        const id = req.params.id
         getDataById(`${tableName}`, id, (error, results) => {
             if (err) {
                 console.log(err);

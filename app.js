@@ -4,7 +4,7 @@ const cors = require('cors');
 
 const app = express();
 // app routers
-const userRouter = require('./api/users/user.router');
+// const userRouter = require('./api/users/user.router');
 const studentRouter = require('./api/students/student.router');
 const surveyRouter = require('./api/surveys/survey.router');
 const tallyFormRouter = require('./api/tallyForms/tallyForm.router');
@@ -20,7 +20,7 @@ app.use(cors({
 }))
 
 .use(express.json())
-.use('/api/users', userRouter)
+// .use('/api/users', userRouter)
 .use('/api/students', studentRouter)
 .use('/api/surveys', surveyRouter)
 .use('/api/tallyForms', tallyFormRouter)
