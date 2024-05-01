@@ -6,8 +6,8 @@ const createRecord = (tableName) => {
     return (req, res) => {
         const body = req.body;
         createData(`${tableName}`, body, (error, results) => {
-            if (err) {
-                console.log(err);
+            if (error) {
+                console.log(error);
                 return res.status(500).json({
                     success: 0,
                     message: 'An error has occured while creating data'
@@ -25,10 +25,9 @@ const createRecord = (tableName) => {
 
 const getRecord = (tableName)=>{
     return (req, res)=>{
-        const body = req.body
-        getAllData(`${tableName}`, body, (error, results) => {
-            if (err) {
-                console.log(err);
+        getAllData(`${tableName}`, (error, results) => {
+            if (error) {
+                console.log(error);
                 return res.status(500).json({
                     success: 0,
                     message: 'An error has occured while fetching data'
@@ -47,8 +46,8 @@ const getSingleRecord = (tableName)=>{
     return (req, res)=>{
         const id = req.params.id
         getDataById(`${tableName}`, id, (error, results) => {
-            if (err) {
-                console.log(err);
+            if (error) {
+                console.log(error);
                 return res.status(500).json({
                     success: 0,
                     message: 'An error has occured while fetching data'
@@ -73,8 +72,8 @@ const getSingleRecord = (tableName)=>{
 const updateRecord = (tableName)=>{
     return (req, res)=>{
         updateData(`${tableName}`, body, (error, results) => {
-            if (err) {
-                console.log(err);
+            if (error) {
+                console.log(error);
                 return res.status(500).json({
                     success: 0,
                     message: 'An error has occured while updating the item'

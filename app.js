@@ -30,5 +30,5 @@ app.use(cors({
 .use('/api/grades', gradeRouter)
 
 .listen(process.env.APP_PORT, ()=>{
-    console.log(`server started on port ${APP_PORT}`)
+    console.log(`server started on port ${process.env.APP_PORT}`)
 })
