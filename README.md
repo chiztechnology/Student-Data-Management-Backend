@@ -111,6 +111,8 @@ npm install
 npm start
 ```
 
+### Click here to access [the Api Documentation](./apiDocumentation.md)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
